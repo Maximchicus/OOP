@@ -1,5 +1,7 @@
+package lab1_5;
+
 import java.lang.System;
-import java.util.*;
+import java.util.Scanner;
 
 public class lab1_5 {
     public static void main(String[] args) {
@@ -7,10 +9,9 @@ public class lab1_5 {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
 
-            for (int i = 2; i <= n; i++) {
-                result *= i;
-            }
-            System.out.println(result);
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+        System.out.println(result);
     }
-
 }
