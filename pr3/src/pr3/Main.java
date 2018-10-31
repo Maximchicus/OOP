@@ -9,11 +9,11 @@ public class Main {
         c.setRadius();
         System.out.println(c.toString());
         System.out.println("Rectangle");
-        r.getLength();
-        r.getWidth();
+        r.setLength();
+        r.setWidth();
         System.out.println(r.toString());
         System.out.println("Square");
-        r.getWidth();
+        s.setWidth();
         System.out.println(s.toString());
     }
 }
