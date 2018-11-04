@@ -6,11 +6,10 @@ public class Student implements Comparable<Student>{
     public int getGPA(){
         return gpa;
     }
-    public int compareTo(Student s){
-
-        return gpa-s.getGPA();
-    }
     public int getName(){
         return name;
+    }
+    public int compareTo(Student s){
+        return gpa-s.getGPA();
     }
 }
