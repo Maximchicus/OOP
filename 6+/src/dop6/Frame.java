@@ -5,24 +5,83 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Frame extends JFrame {
-    //private JPanel mousePanel;
-    JPanel mousePanel[] = new JPanel[4];
+    JPanel mousePanel[] = new JPanel[5];
     private JLabel statusBar;
     Frame() {
         super("Mouse");
-        setLayout(new GridLayout(2, 2));
-        for(int i=0; i<4; i++){
+        setLayout(new BorderLayout());
+        for(int i=0; i<5; i++){
             mousePanel[i] = new JPanel();
-            add(mousePanel[i]);
         }
+        add(mousePanel[0], BorderLayout.CENTER);
+        add(mousePanel[1], BorderLayout.NORTH);
+        add(mousePanel[2], BorderLayout.EAST);
+        add(mousePanel[3], BorderLayout.SOUTH);
+        add(mousePanel[4], BorderLayout.WEST);
         mousePanel[0].setBackground(Color.WHITE);
-        //mousePanel[0].add(mousePanel[0], BorderLayout.CENTER);
         statusBar = new JLabel("default");
-        mousePanel[0].add(statusBar, BorderLayout.SOUTH);
+        mousePanel[3].add(statusBar);
+        JTextField jt1 = new JTextField(10);
+        mousePanel[1].add(jt1);
+        mousePanel[2].add(new JLabel("  В окне   "));
+        mousePanel[4].add(new JLabel("В браузере"));
 
         HandlerClass handler = new HandlerClass();
         mousePanel[0].addMouseListener(handler);
         mousePanel[0].addMouseMotionListener(handler);
+        mousePanel[2].addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                new Win(jt1.getText());
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+        mousePanel[4].addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                new Br(jt1.getText());
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
     }
     private class HandlerClass implements MouseListener, MouseMotionListener{
         public void mouseClicked(MouseEvent e) {
@@ -57,8 +116,7 @@ public class Frame extends JFrame {
         }
 
         @Override
-        public void mouseMoved(MouseEvent e) {
-            statusBar.setText("You moved the mouse");
+        public void mouseMoved(MouseEvent e) { statusBar.setText("You moved the mouse");
         }
     }
 

@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Введите количество студентов: ");
         n = sc.nextInt();
         Student s[] = new Student[n];
+        System.out.println("Введите баллы: ");
         for(int i=0; i<s.length; i++){
             s[i] = new Student();
             s[i].gpa = sc.nextInt();
