@@ -58,6 +58,7 @@ class Main extends JFrame {
                 else if(Madrid > Milan) w = "Real Madrid";
                 else w = "DRAW";
                 JOptionPane.showMessageDialog(null, "WINNER: "+w, "Winner", JOptionPane.WARNING_MESSAGE, icon);
+                System.exit(0);
             }
         });
         setVisible(true);
