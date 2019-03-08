@@ -38,7 +38,8 @@ public class Main {
 
 }
 class Students{
-    LinkedList<String> students = new LinkedList<>();
+    Collection<String> students = new Collection<>();
+    //LinkedList<String> students = new LinkedList<>();
     void addStudent(){
         System.out.print("Студент: ");
         Scanner s = new Scanner(System.in);
@@ -66,9 +67,8 @@ class Students{
             return;
         }
         System.out.println("Студенты:");
-        for(String s: students){
-            System.out.println(s);
+        for(int i=0; i<students.size(); i++){
+            System.out.println(students.get(i));
         }
     }
-
 }

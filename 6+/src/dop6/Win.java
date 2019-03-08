@@ -17,5 +17,4 @@ public class Win extends JFrame{
             JOptionPane.showMessageDialog(null, "Измени ввод", "Кто-то лох", JOptionPane.ERROR_MESSAGE);
         }
     }
-
 }

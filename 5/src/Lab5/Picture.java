@@ -1,9 +1,6 @@
 package Lab5;
 
-import javax.imageio.*;
 import javax.swing.*;
-import java.awt.*;
-import java.io.IOException;
 import java.net.*;
 
 public class Picture extends JFrame{
@@ -19,15 +16,5 @@ public class Picture extends JFrame{
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        /*if (Desktop.isDesktopSupported()) {
-            try {
-                Desktop.getDesktop().browse(new URI(f));
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-        }*/
     }
-
 }
